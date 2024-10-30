@@ -1,0 +1,314 @@
+/*
+=== Plugin Name: Hearty Slider
+frontend CSS - main CSS for the plugin.
+*/
+
+/* reset
+====================================================================== */
+
+div[id^="heartyslider"] a,
+div[id*=" heartyslider"] a,
+div[id^="heartyslider"] a:hover,
+div[id*=" heartyslider"] a:hover,
+div[id^="heartyslider"] a:focus,
+div[id*=" heartyslider"] a:focus {
+  text-decoration: none!important;
+}
+
+/* slideshow
+====================================================================== */
+
+/* container */
+.heartyslider { position: relative; }
+.heartyslider-carousel .hrty-carousel-inner {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* images
+====================================================================== */
+
+.heartyslider-carousel .heartyslider-image-right,
+.heartyslider-carousel .heartyslider-image-left {
+  margin-bottom: 20px;
+}
+
+/* images align */
+.heartyslider-carousel .heartyslider-image {
+  float: none;
+  margin-left: 0px;
+  margin-right: 0px;
+  text-align: center;
+}
+.heartyslider-carousel .heartyslider-images img {
+  width: 100%;
+}
+
+/* caption
+====================================================================== */
+
+/*
+===
+===   style
+===
+*/
+
+/* default */
+.heartyslider-carousel {
+  position: relative;
+}
+.heartyslider-carousel .hrty-carousel-caption {
+  width: 100% !important;
+  height: auto !important;
+  left: 0;
+  right: 0;
+  top: auto;
+  bottom: 0;
+  padding: 21px;
+}
+.heartyslider-carousel .hrty-carousel-caption h3,
+.heartyslider-carousel .hrty-carousel-caption  p {
+  text-align: left;
+}
+
+  /* small devices (landscape phones, less than 768px) */
+  @media (max-width: 767.98px) {
+
+    .heartyslider-carousel .hrty-carousel-caption {
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+
+  }
+
+
+/*
+===
+===   color
+===
+*/
+
+/* transparent */
+.heartyslider-carousel .heartyslider-caption.heartyslider-caption-transparent .hrty-carousel-caption {
+  background-color: transparent;
+}
+
+/* dark */
+.heartyslider-carousel .heartyslider-caption.heartyslider-caption-dark .hrty-carousel-caption {
+  background-color: rgba( 17,17,17, 0.7);
+  text-shadow: none;
+}
+
+/* light */
+.heartyslider-carousel .heartyslider-caption.heartyslider-caption-light .hrty-carousel-caption {
+  background-color: rgba( 255,255,255, 0.7);
+  text-shadow: none;
+}
+
+/*
+===
+===   title
+===
+*/
+
+.heartyslider-carousel h3[id^="heartyslider-caption-title"],
+.heartyslider-carousel h3[id*=" heartyslider-caption-title"] {
+  font-style: normal;
+  border: 0 none !important;
+  padding: 0 !important;
+  font-weight: normal;
+}
+
+/*
+===
+===   description
+===
+*/
+
+.heartyslider-carousel p.heartyslider-caption-description br {
+  margin-bottom: 1rem;
+}
+
+/*
+===
+===   caption effects
+===
+*/
+
+/* js classes */
+.heartyhide { opacity:0; }
+.heartyshow { opacity:1; }
+
+/* no effect */
+.heartyslider-caption-effect-none,
+div[id^="heartyslider-carousel-"] .heartyslider-caption-effect-none,
+div[id*=" heartyslider-carousel-"] .heartyslider-caption-effect-none {
+  -webkit-animation: none;
+  -moz-animation: none;
+  -o-animation: none;
+  -ms-animation: none;
+  animation: none;
+  position: relative;
+}
+
+/* caption effect */
+.heartyslider-caption-effect {
+  -webkit-animation-name: heartyslider-caption-effect;
+  -moz-animation-name: heartyslider-caption-effect;
+  animation-name: heartyslider-caption-effect;
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes heartyslider-caption-effect {
+
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+
+}
+@-moz-keyframes heartyslider-caption-effect {
+
+  0% {
+    opacity: 0;
+    -moz-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -moz-transform: none;
+    transform: none;
+  }
+
+}
+@keyframes heartyslider-caption-effect {
+
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    -moz-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    -moz-transform: none;
+    transform: none;
+  }
+
+}
+
+/* arrows
+====================================================================== */
+
+#heartyslider-arrows .hrty-carousel-control {
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+  background: none;
+  height: 40px;
+  width: 40px;
+  top: 50%;
+  margin-top: -60px;
+  -webkit-transition: all 0.3s ease-out 0s;
+  -moz-transition: all 0.3s ease-out 0s;
+  -o-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
+}
+#heartyslider-arrows .hrty-carousel-control:hover,
+#heartyslider-arrows .hrty-carousel-control:focus {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.4);
+}
+
+  /* small devices (landscape phones, less than 768px) */
+  @media (max-width: 767.98px) {
+
+    #heartyslider-arrows .hrty-carousel-control {
+      margin-top: -20px;
+    }
+
+  }
+
+/* left and right */
+#heartyslider-arrows .hrty-right.hrty-carousel-control {
+  right: 15px;
+  left: auto;
+}
+#heartyslider-arrows .hrty-left.hrty-carousel-control {
+  left: 15px;
+  right: auto;
+}
+
+/* icons */
+#heartyslider-arrows .hrty-carousel-control i {
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: 24px;
+  line-height: 40px;
+  padding: 0;
+}
+#heartyslider-arrows .hrty-right.hrty-carousel-control i {
+  padding-left: 4px;
+}
+
+/* indicators
+====================================================================== */
+
+.heartyslider-carousel .hrty-carousel-indicators {
+  position: relative;
+  list-style-type: none;
+  bottom: 0px;
+  left: auto;
+  right: auto;
+  width: auto;
+  margin: 0px auto 30px;
+  display: table;
+}
+.heartyslider-carousel .hrty-carousel-indicators li {
+  float: left;
+  margin-right: 2px;
+  margin-left: 2px;
+  margin-top: 0;
+  border: 0 none;
+  width: 12px;
+  height: 12px;
+  vertical-align: middle;
+  box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.1);
+}
+.heartyslider-carousel .hrty-carousel-indicators li.hrty-active {
+  opacity: 1;
+}
+
+/*
+===
+===   color
+===
+*/
+
+/* dark */
+.hrty-carousel-indicators li.heartyslider-dark {
+  background-color: #111;
+}
+
+/* light */
+.hrty-carousel-indicators li.heartyslider-light {
+  background-color: #ddd;
+}
+
